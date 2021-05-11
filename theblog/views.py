@@ -14,6 +14,6 @@ class HomeView(ListView):
 #List all content on the article details page in DetailView
 class ArticleDetailView(DetailView):
     model = Post
-    template_name = 'article_details.html'    
+    template_name = 'article.html'    
     
     
