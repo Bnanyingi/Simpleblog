@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView
 from .models import Post
 
 #define our views 
@@ -14,6 +14,11 @@ class HomeView(ListView):
 #List all content on the article details page in DetailView
 class ArticleDetailView(DetailView):
     model = Post
-    template_name = 'article_details.html'    
+    template_name = 'article.html'   
+    
+class AddPostView(CreateView): 
+    model = Post
+    template_name = 'addpost.html'    
+    fields = '__all__'
     
     
