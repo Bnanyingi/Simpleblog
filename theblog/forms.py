@@ -6,10 +6,10 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ('title', 'title_tag', 'author', 'body')
         
-        widget = {
+        widgets = {
             
-            'title': form.TextInput(attrs={'class': 'form-control'}),
-            'title_tag': form.TextInput(attrs={'class': 'form-control'}),
-            'author': form.TextInput(attrs={'class': 'form-control'}),
-            'body': form.TextInput(attrs={'class': 'form-control'}),
+            'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Add a title'}),
+            'title_tag': forms.TextInput(attrs={'class': 'form-control'}),
+            'author': forms.Select(attrs={'class': 'form-control'}),
+            'body': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Add your article here'}),
         }
